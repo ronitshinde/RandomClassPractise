@@ -11,7 +11,7 @@ namespace RandomPractise
         const int Constant_Number = 5;
         public void NextMethods()
         {
-            //Method One - using Next()
+            //Method Two - using Next(int)
             Random next = new Random(); //object of random class.
             int i = 0;
             while (i <= Constant_Number) //Using this loop it will print until the condition is satisfied.
