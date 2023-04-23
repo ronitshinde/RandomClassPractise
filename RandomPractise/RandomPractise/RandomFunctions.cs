@@ -12,11 +12,13 @@ namespace RandomPractise
         public void NextMethods()
         {
             //Method One - using Next()
-            Random next = new Random(); //object of random class
-            for (int i = 0; i < Constant_Number; i++)
+            Random next = new Random(); //object of random class.
+            int i = 0;
+            while (i <= Constant_Number) //Using this loop it will print until the condition is satisfied.
             {
-                int randomNum = next.Next(); //way to call "Next()" method
+                int randomNum = next.Next(10); //way to call "Next(int)" method will return random values less than 10.
                 Console.WriteLine(randomNum);
+                i++;
             }
         }
     }
