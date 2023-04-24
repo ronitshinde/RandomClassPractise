@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,15 +12,13 @@ namespace RandomPractise
         const int Constant_Number = 5;
         public void NextMethods()
         {
-            //Method Four - using NextDouble()
-            Random next = new Random(); //object of random class.
-            int i = 0;
-            while (i <= Constant_Number) //Using this loop it will print until the condition is satisfied.
+            //Method Five - using NextByte()
+            Random output = new Random(); //object of random class.
+            byte[] nextByteMethod = new byte[5];
+            output.NextBytes(nextByteMethod); //using this method fills randoms numbers in array of bytes.
+            foreach (byte element in nextByteMethod) //Using this repeatation it will print all the values of array named nextByteMethod.
             {
-                double randomNum = next.NextDouble(); //way to call "NextDouble()" method will return random
-                                               //values greater than 0.0 and less than 1.0
-                Console.WriteLine(randomNum);
-                i++;
+                Console.WriteLine(element);
             }
         }
     }
